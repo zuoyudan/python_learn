@@ -1,0 +1,19 @@
+#!/usr/bin/python
+# -*- coding:utf-8 -*-
+'''
+A simple, lightweitht, WSGI-compatible web framework.
+'''
+
+__author__='wolf zoe'
+
+import types,os,re,cgi,sys,time,datetime,functools,mimetypes,threading,logging,urllib,traceback
+
+try:
+	from cStringIO import StringIO
+except ImportError:
+	from StringIO import StringIO
+
+#thread local object for storing request and response
+
+ctx=threading.local()
+
